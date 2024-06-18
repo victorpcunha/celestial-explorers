@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-gradient-start: #0D1B2A;
+    --background-gradient-end: #415A77;
+    --background-fg-header: #0d1b2acb;
+    --highligth-color: #e68f2d;
+    
+    --h1-color: #FFFFFF;
+    --h2-color: #FFD700;
+    --p-color: #D9E2EC;
+
+    --h1-font: 'Orbitron', sans-serif;
+    --h2-font: 'Exo 2', sans-serif;
+    --p-font: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: linear-gradient(to bottom, var(--background-gradient-start), var(--background-gradient-end));
+    font-family: var(--p-font);
+    color: var(--p-color);
+}
+
+/* config header */
+
+.bg-hero {
+    background: var(--background-gradient-start) url(../img/padrao/header.png) no-repeat center center / cover scroll;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 14rem;
+    background-color: var(--background-fg-header);
+    min-height: 60vh;
+    position: relative;
+}
+
+.hero-content {
+    padding: 5rem 6rem 2rem 6rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-title {
+    font-family: var(--h1-font);
+    font-size: 3.25rem;
+    color: var(--h1-color);
+}
+
+.hero-celestial {
+    color: var(--h2-color);
+    text-shadow: 0 0 20px var(--h2-color);
+}
+
+.hero-text {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+}
+
+.navbar-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-btn {
+    list-style-type: none;
+    padding: 1rem;
+}
+
+nav a {
+    font-size: 1.3rem;
+    color: var(--p-color);
+    text-decoration: none;
+    padding-bottom: .2rem;
+    border-bottom: 0 solid transparent;
+    transition: .4s ease-in-out;
+}
+
+nav a:hover {
+    color: var(--h2-color);
+    font-size: 1.4rem;
+    border-bottom: 1px solid var(--h2-color);
+}
+
+
+/* config main */
+.main-content {
+    margin: 0 auto 1rem auto;
+    min-width: 300px;
+    max-width: 1000px;
+}
+
+h2 {
+    font-family: var(--h2-font);
+    font-size: 2.5rem;
+    color: var(--h2-color);
+    padding-bottom: 2rem;
+}
+
+section {
+    padding: 2.5rem 6.25rem;
+    margin: 0 auto;
+}
+
+.exploracao {
+    background: transparent url(../img/padrao/header2.png) no-repeat center center / cover fixed;
+    max-width: 100%;
+}
