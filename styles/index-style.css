@@ -9,7 +9,7 @@
     --background-gradient-end: #415A77;
     --background-fg-header: #0d1b2acb;
     --highligth-color: #E66031;
-    
+
     --h1-color: #FFFFFF;
     --h2-color: #E66031;
     --p-color: #D9E2EC;
@@ -17,6 +17,13 @@
     --h1-font: 'Orbitron', sans-serif;
     --h2-font: 'Exo 2', sans-serif;
     --p-font: 'Roboto', sans-serif;
+
+    --h1-size: 3.25rem;
+    --hero-text: 1.5rem;
+    --h2-size: 2.5rem;
+    --p-size: 1.3rem;
+
+    --footer-p-size: 1.2rem;
 }
 
 body {
@@ -36,20 +43,20 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2.5rem 14rem;
+    padding: 2.5rem 8rem;
     background-color: var(--background-fg-header);
     min-height: 60vh;
     position: relative;
 }
 
 .hero-content {
-    padding: 5rem 6rem 2rem 6rem;
+    padding: 5rem 6rem 2rem;
     text-align: center;
 }
 
 .hero-title {
     font-family: var(--h1-font);
-    font-size: 3.25rem;
+    font-size: var(--h1-size);
     color: var(--h1-color);
 }
 
@@ -60,7 +67,7 @@ body {
 
 .hero-text {
     margin-top: 2rem;
-    font-size: 1.5rem;
+    font-size: var(--hero-text);
 }
 
 nav {
@@ -81,7 +88,7 @@ nav {
 }
 
 nav a {
-    font-size: 1.3rem;
+    font-size: var(--p-size);
     color: var(--p-color);
     text-decoration: none;
     padding-bottom: .2rem;
@@ -105,14 +112,14 @@ nav a:hover {
 
 .section-title {
     font-family: var(--h2-font);
-    font-size: 2.5rem;
+    font-size: var(--h2-size);
     color: var(--h2-color);
     letter-spacing: .2rem;
     padding-bottom: 2rem;
 }
 
 .section-text {
-    font-size: 1.3rem;
+    font-size: var(--p-size);
     text-align: justify;
     letter-spacing: .1rem;
     line-height: 1.6rem;
@@ -133,9 +140,10 @@ section {
     gap: 20px;
 }
 
-.exploracao-img, .geracao-img {
+.exploracao-img,
+.geracao-img {
     width: 300px;
-    height: auto; 
+    height: auto;
 }
 
 .exploracao-text-container {
@@ -146,7 +154,8 @@ section {
     min-height: 450px;
 }
 
-.exploracao-btn, .desbravando-btn {
+.exploracao-btn,
+.desbravando-btn {
     color: var(--p-color);
     text-decoration: none;
     padding: .5rem 1rem;
@@ -154,7 +163,8 @@ section {
     transition: .4s ease-in-out;
 }
 
-.exploracao-btn:hover, .desbravando-btn:hover {
+.exploracao-btn:hover,
+.desbravando-btn:hover {
     color: var(--p-color);
     background-color: var(--h2-color);
     border-color: var(--h2-color);
@@ -195,13 +205,13 @@ section {
     max-width: fit-content;
 }
 
-picture + .section-text {
+picture+.section-text {
     padding-bottom: 1rem;
 }
 
 /* section --> geracao */
 
-.flex-container-geracao{
+.flex-container-geracao {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -214,17 +224,16 @@ picture + .section-text {
 
 /* footer */
 .footer-container {
-    /* font-size: 1.1rem; */
     text-align: center;
     padding: 1rem 6.25rem;
-    margin: 0 auto;
 
+    margin: 0 auto;
     min-width: 300px;
     max-width: 1000px;
 }
 
 .footer-text {
-    font-size: 1.2rem;
+    font-size: var(--footer-p-size);
     padding-bottom: 1rem;
 }
 
@@ -238,4 +247,29 @@ picture + .section-text {
 .link-footer:hover {
     color: var(--h2-color);
     border-bottom: 2px solid var(--h2-color);
+}
+
+.link-celestial {
+    color: var(--p-color);
+}
+
+/* MEDIA TYPES */
+
+@media (max-width: 1024px) {
+
+    .hero-container {
+        padding: 1rem 5rem;
+    }
+
+    .hero-content {
+        padding: 5rem 3rem 2rem;
+    }
+
+    
+}
+
+@media (max-width: 848px) {
+    .hero-content {
+        padding: 2rem 1.5rem 1rem;
+    }
 }
