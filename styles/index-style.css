@@ -102,13 +102,19 @@ nav a:hover {
     border-bottom: 1px solid var(--highligth-color);
 }
 
-
-/* config main */
-.main-content {
+/* config padrao */
+main {
     margin: 0 auto 1rem auto;
     min-width: 300px;
     max-width: 1000px;
 }
+
+section {
+    padding: 2.5rem 6.25rem 1.25rem;
+    margin: 0 auto;
+}
+/* fim config padrao */
+
 
 .section-title {
     font-family: var(--h2-font);
@@ -123,11 +129,6 @@ nav a:hover {
     text-align: justify;
     letter-spacing: .1rem;
     line-height: 1.6rem;
-}
-
-section {
-    padding: 2.5rem 6.25rem 1.25rem;
-    margin: 0 auto;
 }
 
 .exploracao {

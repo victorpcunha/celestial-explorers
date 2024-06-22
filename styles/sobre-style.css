@@ -12,13 +12,20 @@
 
     --h1-color: #FFFFFF;
     --h2-color: #E66031;
+    --h3-color: #CC5030;
     --p-color: #D9E2EC;
 
     --h1-font: 'Orbitron', sans-serif;
     --h2-font: 'Exo 2', sans-serif;
     --p-font: 'Roboto', sans-serif;
 
-    --h1-size: 
+    --h1-size: 3.25rem;
+    --hero-text: 1.5rem;
+    --h2-size: 2.5rem;
+    --h3-size: 1.8rem;
+    --p-size: 1.3rem;
+
+    --footer-p-size: 1.2rem;
 }
 
 body {
@@ -27,7 +34,187 @@ body {
     color: var(--p-color);
 }
 
+/* config header */
 
+.bg-hero {
+    background: var(--background-gradient-start) url(../img/padrao/header.png) no-repeat center center / cover fixed;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 8rem;
+    background-color: var(--background-fg-header);
+    min-height: 60vh;
+    position: relative;
+}
+
+.hero-content {
+    padding: 5rem 6rem 2rem;
+    text-align: center;
+}
+
+.hero-title {
+    font-family: var(--h1-font);
+    font-size: var(--h1-size);
+    color: var(--highligth-color);
+    text-shadow: 0 0 20px var(--highligth-color)
+}
+
+.hero-text {
+    padding: 2rem 0;
+    font-size: var(--hero-text);
+}
+
+.hero-btn {
+    font-size: var(--p-size);
+    color: var(--p-color);
+    text-decoration: none;
+    padding: .5rem 1rem;
+    border: 1px solid white;
+    transition: .4s ease-in-out;
+}
+
+.hero-btn:hover {
+    color: var(--p-color);
+    background-color: var(--highligth-color);
+    border-color: var(--highligth-color);
+    transform: scale(1.1);
+}
+
+nav {
+    position: absolute;
+    top: 0;
+}
+
+.navbar-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-btn {
+    list-style-type: none;
+    padding: 1rem;
+}
+
+nav a {
+    font-size: var(--p-size);
+    color: var(--p-color);
+    text-decoration: none;
+    padding-bottom: .2rem;
+    border-bottom: 0 solid transparent;
+    transition: .4s ease-in-out;
+}
+
+nav a:hover {
+    color: var(--highligth-color);
+    font-size: 1.4rem;
+    border-bottom: 1px solid var(--highligth-color);
+}
+/* fim header */
+
+/* config padrao */
+main {
+    margin: 0 auto 1rem auto;
+    min-width: 300px;
+    max-width: 1000px;
+}
+
+section {
+    padding: 2.5rem 6.25rem 1.25rem;
+    margin: 0 auto;
+}
+
+/* config titulos das sections */
+.sobre-title, .fazemos-title, .missao-title, .visao-title, .valores-title {
+    font-family: var(--h2-font);
+    font-size: var(--h2-size);
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: var(--h2-color);
+    padding-bottom: 2rem;
+}
+
+/* config pragrafos das sections */
+.sobre-text, .fazemos-text, .missao-text, .visao-text, .valores-text {
+    font-size: var(--p-size);
+    text-align: justify;
+    letter-spacing: .1rem;
+    line-height: 1.6rem;
+    padding-bottom: 1rem;
+}
+
+.sobre-text-span, .fazemos-text-span, .missoes-text-span, .visao-text-span {
+    color: var(--highligth-color);
+    text-shadow: 0 0 20px var(--highligth-color);
+}
+
+/* backgroud da section --> fazemos */
+.bg-fazemos {
+    background: transparent url(../img/sobre/fazemos-img.png) no-repeat bottom center / cover fixed;
+    /* padding-bottom: 1rem; */
+}
+
+/* foreground da section -- > fazemos */
+.fazemos {
+    background-color: var(--background-fg-header);
+    padding-bottom: 3rem;
+}
+
+/* config section fazemos --> h3 / section valores --> li */
+.fazemos-subtitle, .valores-lista-item {
+    font-family: var(--h2-font);
+    font-size: var(--h3-size);
+    letter-spacing: .1rem;
+    text-align: center;
+    color: var(--h3-color);
+    text-shadow: 0 0 20px var(--highligth-color);
+    padding-bottom: 1rem;
+}
+
+/* config flex sections --> missao & visao */
+.missao-flex, .visao-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* config img sections --> missao & visao */
+.missao-img, .visao-img {
+    display: block;
+    max-width: 300px;
+    height: auto;
+}
+
+/* section --> missao */
+.missao-text {
+    padding-left: 2rem;
+}
+
+/* section --> visao */
+
+.visao-text {
+    padding-right: 2rem;
+}
+
+/* section valores --> ul */
+.valores-lista {
+    list-style-type: none;
+}
+
+.valores-lista-definicao {
+    font-size: var(--p-size);
+    text-align: justify;
+    padding-bottom: 2rem;
+}
+
+.valores-lista-definicao-ultimo {
+    padding-bottom: 0;
+}
 
 /* footer */
 .footer-container {
