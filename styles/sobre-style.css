@@ -173,7 +173,7 @@ section {
     text-align: center;
     color: var(--h3-color);
     text-shadow: 0 0 20px var(--highligth-color);
-    padding-bottom: 1rem;
+    padding: 1rem 0;
 }
 
 /* config flex sections --> missao & visao */
@@ -188,6 +188,9 @@ section {
     display: block;
     max-width: 300px;
     height: auto;
+    /* box-shadow: 0 0 20px var(--highligth-color); */
+    border: 2px solid var(--highligth-color);
+    border-radius: 10px;
 }
 
 /* section --> missao */
@@ -204,12 +207,21 @@ section {
 /* section valores --> ul */
 .valores-lista {
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.valores-lista-item {
+    background: linear-gradient(90deg, black 0%, transparent 100%);
+    font-weight: bold;
+    padding: 1rem 2rem;
 }
 
 .valores-lista-definicao {
     font-size: var(--p-size);
     text-align: justify;
-    padding-bottom: 2rem;
+    padding: 1rem 0 2rem;
 }
 
 .valores-lista-definicao-ultimo {
@@ -218,7 +230,9 @@ section {
 
 /* footer */
 .footer-container {
+    background-color: black;
     text-align: center;
+    line-height: 1.8rem;
     padding: 1rem 6.25rem;
 
     margin: 0 auto;
@@ -245,4 +259,123 @@ section {
 
 .link-celestial {
     color: var(--p-color);
+}
+
+/* Media Types */
+
+@media (max-width: 1024px) {
+    .hero-container {
+        /* padding: 3rem 5rem; */
+        min-height: 40vh;
+    }
+
+    .hero-content {
+        padding: 5rem 3rem 2rem;
+    }
+
+    .missao-flex, .visao-flex {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .missao-img, .visao-img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 2rem;
+    }
+
+    .missao-text, .visao-text {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .visao-img {
+        margin-top: 2rem;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 884px) {
+    .hero-content {
+        padding: 2rem 1.5rem 1rem;
+    }
+
+    nav {
+        top: 1rem;
+    }
+
+    .sobre-title, .fazemos-title, .missao-title, .visao-title, .valores-title {
+        font-size: 2rem;
+    }
+
+}
+
+@media (max-width: 575px) {
+    .hero-container {
+        padding: 1rem 2.5rem 1rem;
+        min-height: 60vh;
+    }
+
+    .hero-content {
+        padding: 2rem 0 0;
+    }
+
+    .hero-title {
+        padding-top: 1rem;
+        font-size: 3rem;
+    }
+
+    .navbar-btn {
+        padding: .5rem;
+    }
+
+    main {
+        max-width: 400px;
+    }
+
+    section {
+        padding: 1rem 2rem;
+    }
+
+    .sobre-title, .fazemos-title, .missao-title, .visao-title, .valores-title {
+     text-align: center;
+    }
+
+    .sobre-text, .fazemos-text, .missao-text, .visao-text, .valores-text {
+        text-align: center;
+        line-height: 1.8rem;
+        padding-bottom: 1rem;
+    }
+
+    .missao-img, .visao-img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .footer-container {
+        text-align: justify;
+        padding: 1rem 2rem;
+    }
+
+    .footer-text {
+        text-align: center;
+    }
+}
+
+@media (max-width: 360px) {
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    nav a:hover {
+        font-size: 1.1rem;
+    }
+
+    .sobre-text, .fazemos-text, .missao-text, .visao-text, .valores-text {
+        font-size: 1.1rem;
+        text-align: center;
+    }
 }
