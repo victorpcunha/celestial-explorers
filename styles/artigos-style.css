@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-gradient-start: #0D1B2A;
+    --background-gradient-end: #415A77;
+    --background-fg-header: #0d1b2acb;
+    --highligth-color: #E66031;
+
+    --h1-color: #FFFFFF;
+    --h2-color: #E66031;
+    --h3-color: #CC5030;
+    --p-color: #D9E2EC;
+
+    --h1-font: 'Orbitron', sans-serif;
+    --h2-font: 'Exo 2', sans-serif;
+    --p-font: 'Roboto', sans-serif;
+
+    --h1-size: 3.25rem;
+    --hero-text: 1.5rem;
+    --h2-size: 2.5rem;
+    --h3-size: 1.8rem;
+    --p-size: 1.3rem;
+
+    --footer-p-size: 1.2rem;
+}
+
+body {
+    background-image: linear-gradient(to bottom, var(--background-gradient-start), var(--background-gradient-end));
+    font-family: var(--p-font);
+    color: var(--p-color);
+}
+
+/* config header */
+
+.bg-hero {
+    background: var(--background-gradient-start) url(../img/padrao/header.png) no-repeat center center / cover fixed;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 8rem;
+    background-color: var(--background-fg-header);
+    min-height: 60vh;
+    position: relative;
+}
+
+.hero-content {
+    padding: 5rem 6rem 2rem;
+    text-align: center;
+}
+
+.hero-title {
+    font-family: var(--h1-font);
+    font-size: var(--h1-size);
+    color: var(--highligth-color);
+    text-shadow: 0 0 20px var(--highligth-color)
+}
+
+.hero-text {
+    padding: 2rem 0;
+    font-size: var(--hero-text);
+}
+
+.hero-btn {
+    font-size: var(--p-size);
+    color: var(--p-color);
+    text-decoration: none;
+    padding: .5rem 1rem;
+    border: 1px solid white;
+    transition: .4s ease-in-out;
+}
+
+.hero-btn:hover {
+    color: var(--p-color);
+    background-color: var(--highligth-color);
+    border-color: var(--highligth-color);
+    transform: scale(1.1);
+}
+
+nav {
+    position: absolute;
+    top: 0;
+}
+
+.navbar-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-btn {
+    list-style-type: none;
+    padding: 1rem;
+}
+
+nav a {
+    font-size: var(--p-size);
+    color: var(--p-color);
+    text-decoration: none;
+    padding-bottom: .2rem;
+    border-bottom: 0 solid transparent;
+    transition: .4s ease-in-out;
+}
+
+nav a:hover {
+    color: var(--highligth-color);
+    font-size: 1.4rem;
+    border-bottom: 1px solid var(--highligth-color);
+}
+/* fim header */
+
+/* config padrao */
+main {
+    margin: 0 auto 1rem auto;
+    min-width: 300px;
+    max-width: 1000px;
+}
+
+section {
+    text-align: center;
+    padding: 2.5rem 6.25rem 1.25rem;
+}
+
+.cards-table {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 50vh;
+}
+
+.card {
+    display: block;
+    width: 300px;
+    height: 400px;
+    margin: 0 1rem 2rem;
+    border: 1px solid transparent;
+    transition: .4s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    border: 1px solid var(--highligth-color);
+}
+
+.card-link {
+    text-decoration: none;
+}
+
+.card-img {
+    width: 100%;
+    height: 45%;
+}
+
+
+.card-title {
+    font-family: var(--h2-font);
+    font-size: 2rem;
+    color: var(--h3-color);
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.card-text {
+    color: var(--p-color);
+    padding: 0 1rem 1rem;
+    text-align: justify;
+    padding-bottom: 2rem;
+}
+
+/* footer */
+.footer-container {
+    background-color: black;
+    text-align: center;
+    line-height: 1.8rem;
+    padding: 1rem 6.25rem;
+
+    margin: 0 auto;
+    /* min-width: 300px;
+    max-width: 1000px; */
+}
+
+.footer-text {
+    font-size: var(--footer-p-size);
+    padding-bottom: 1rem;
+}
+
+.link-footer {
+    color: var(--p-color);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: .4s ease-in-out;
+}
+
+.link-footer:hover {
+    color: var(--h2-color);
+    border-bottom: 2px solid var(--h2-color);
+}
+
+.link-celestial {
+    color: var(--p-color);
+}
