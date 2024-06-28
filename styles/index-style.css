@@ -235,10 +235,7 @@ picture+.section-text {
     text-align: center;
     line-height: 1.8rem;
     padding: 1rem 6.25rem;
-
     margin: 0 auto;
-    min-width: 300px;
-    max-width: 1000px;
 }
 
 .footer-text {
@@ -314,8 +311,12 @@ picture+.section-text {
     }
 
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
         padding-top: 1rem;
+    }
+
+    .hero-text {
+        font-size: 1.3rem;
     }
 
     .navbar-btn {
