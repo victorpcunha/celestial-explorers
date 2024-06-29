@@ -59,13 +59,8 @@ body {
 .hero-title {
     font-family: var(--h1-font);
     font-size: var(--h1-size);
-    color: var(--h1-color);
-    /* text-shadow: 0 0 20px var(--highligth-color); */
-}
-
-.destaque-text {
     color: var(--highligth-color);
-    text-shadow: 0 0 20px var(--highligth-color);
+    text-shadow: 0 0 20px var(--highligth-color)
 }
 
 .hero-text {
@@ -130,63 +125,104 @@ main {
 }
 
 section {
-    text-align: center;
     padding: 2.5rem 6.25rem 1.25rem;
+    margin: 0 auto;
 }
+/* fim config padrao */
 
-.main-hero-title {
+.endereco-title, .form-title {
     font-family: var(--h2-font);
     font-size: var(--h2-size);
     color: var(--h2-color);
+    padding-bottom: 1rem;
+    text-align: center;
 }
 
-.cards-table {
+.endereco-text, .form-text {
+    font-size: var(--p-size);
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+
+
+form {
+    font-size: var(--p-size);
+}
+
+.label-input-checkbox-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: stretch;
-    min-height: 50vh;
+    align-items: center;
 }
 
-.card {
-    display: block;
+.label-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.label-input-text {
+    padding-top: 1rem;
+    padding-bottom: .5rem;
+}
+
+.label-input-input {
+    padding: .5rem;
     width: 300px;
-    height: min-content;
-    margin: 0 1rem 2rem;
-    border: 1px solid transparent;
-    transition: .4s ease-in-out;
 }
 
-.card:hover {
-    transform: scale(1.1);
-    border: 1px solid var(--highligth-color);
-}
 
-.card-link {
-    text-decoration: none;
-}
-
-.card-img {
-    width: 100%;
-    height: auto;
-}
-
-.card-title {
-    font-family: var(--h2-font);
-    font-size: 2rem;
-    color: var(--h3-color);
-    margin: 1rem 0;
+.form-checkbox {
+    padding: 1rem 0;
     text-align: center;
 }
 
-.card-text {
+.form-checkbox-text {
+    padding-bottom: 1rem;
+}
+
+.checkbox-content {
+    width: 300px;
+    padding-bottom: .5rem;
+}
+
+.textarea-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-textarea {
+    width: 500px;
+    height: 80px;
+    padding: .5rem;
+}
+
+button {
+    font-family: var(--p-font);
     font-size: var(--p-size);
     color: var(--p-color);
-    padding: 0 1rem;
-    text-align: justify;
-    padding-bottom: 2rem;
+    background-color: transparent;
+    border: 1px solid white;
+    padding: .5rem 1.5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: .4s ease-in-out;
 }
+
+button:hover {
+    transform: scale(1.1);
+    background-color: var(--highligth-color);
+    border: 1px solid var(--highligth-color);
+}
+
+
+
+
 
 /* footer */
 .footer-container {
@@ -216,104 +252,4 @@ section {
 
 .link-celestial {
     color: var(--p-color);
-}
-/* fim footer */
-
-/* Media Types */
-
-@media (max-width: 1024px) {
-    .hero-container {
-        padding: 3rem 5rem;
-        min-height: 40vh;
-    }
-
-    .hero-content {
-        padding: 5rem 3rem 2rem;
-    }
-}
-
-@media (max-width: 884px) {
-    .hero-content {
-        padding: 3rem 1.5rem 0;
-    }
-
-    .hero-text {
-        padding-bottom: 0;
-    }
-
-    nav {
-        top: 1rem;
-    }
-
-    .card {
-        width: 400px;
-    }
-}
-
-@media (max-width: 575px) {
-    .hero-container {
-        padding: 1rem 2.5rem 1rem;
-        min-height: 60vh;
-    }
-
-    .hero-content {
-        padding: 2rem 0 0;
-    }
-
-    .hero-title {
-        padding-top: 1rem;
-        font-size: 3rem;
-    }
-
-    .hero-text {
-        font-size: 1.3rem;
-    }
-
-    .navbar-btn {
-        padding: .5rem;
-    }
-
-    main {
-        max-width: 400px;
-    }
-
-    section {
-        padding: 1rem 2rem;
-    }
-
-    .footer-container {
-        text-align: justify;
-        padding: 1rem 2rem;
-    }
-
-    .footer-text {
-        text-align: center;
-    }
-}
-
-@media (max-width: 360px) {
-
-    .hero-title {
-        font-size: 2.3rem;
-    }
-
-    .hero-text {
-        font-size: 1.1rem;
-    }
-
-    nav a {
-        font-size: 1rem;
-    }
-
-    nav a:hover {
-        font-size: 1.1rem;
-    }
-
-    .main-hero-title {
-        font-size: 2rem;
-    }
-
-    .card-text  {
-        text-align: center;
-    }
 }

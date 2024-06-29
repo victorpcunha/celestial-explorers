@@ -4,17 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/sobre-style.css">
-    <title>Document</title>
+    <link rel="shortcut icon" href="img/ico/galaxia-favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/contato-style.css">
+    <!-- <link rel="stylesheet" href="styles/sobre-style.css"> -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Audiowide&family=Exo+2:wght@400;700&family=Open+Sans:wght@400;700&family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <title>Contato - Celestial Explorers</title>
 </head>
 
 <body>
     <div class="bg-hero">
         <header class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">Conheça mais sobre o Universo com a <span class="hero-celestial">Celestial
-                        Explorers</span></h1>
-                <p class="hero-text">Desvendando os mistérios do Universo.</p>
+                <h1 class="hero-title">Entre em Contato Conosco!</h1>
+                <p class="hero-text">Entre em contato conosco para saber mais sobre nossas missões e programas
+                    espaciais.</p>
             </div>
             <nav>
                 <ul class="navbar-list">
@@ -24,9 +29,63 @@
                     <li class="navbar-btn"><a href="contato.html">Contato</a></li>
                 </ul>
             </nav>
+            <a href="#sobre" class="hero-btn">Saiba mais</a>
         </header>
     </div>
 
+    <main>
+        <section class="endereco">
+            <h2 class="endereco-title">Nossas informações de contato</h2>
+            <address>
+                <p class="endereco-text"><strong>Email:</strong> contatoficticio@celestialexplorers.com</p>
+                <p class="endereco-text"><strong>Telefone:</strong> +55 85 91234-5678</p>
+                <p class="endereco-text"><strong>Endereço:</strong> Av. das Estrelas, 1000, Fortaleza, CE, Brasil</p>
+            </address>
+        </section>
+
+            <section class="form-contato">
+                <h2 class="form-title">Entre em contato conosco</h2>
+                <p class="form-text">Te daremos um retorno o mais rápido possível.</p>
+                <form action="#" method="post">
+                    <div class="label-input-checkbox-container">
+                        <div class="label-input">
+                            <label class="label-input-text" for="name">Nome</label>
+                            <input class="label-input-input" type="text" name="name" id="name" placeholder="Informe seu nome" required>
+                        </div>
+                        <div class="label-input">
+                            <label class="label-input-text" for="email">Email</label>
+                            <input class="label-input-input" type="email" name="email" id="email" placeholder="Informe seu email" required>
+                        </div>
+                        <div class="label-input">
+                            <label class="label-input-text" for="tel">Telefone</label>
+                            <input class="label-input-input" type="tel" name="tel" id="tel" maxlength="11" placeholder="85912345678" required>
+                        </div>
+                        <div class="form-checkbox" required>
+                            <p class="form-checkbox-text">Informe quais áreas de interesse</p>
+                            <div class="checkbox-content">
+                                <input type="checkbox" id="programa" name="programa" value="Programa">
+                                <label for="programa"> Programas espaciais</label>
+                            </div>
+                            <div class="checkbox-content">
+                                <input type="checkbox" id="simulacao" name="simulacao" value="Simulacao">
+                                <label for="simulacao"> Simulações</label>
+                            </div>
+                            <div class="checkbox-content">
+                                <input type="checkbox" id="treinamento" name="treinamento" value="Treinamento">
+                                <label for="treinamento"> Treinamentos espaciais</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="textarea-container">
+                        <label class="label-input-text for="mensagem">Informe sua mensagem</label>
+                        <textarea class="form-textarea" name="mensagem" id="mensagem" placeholder="Informe o motivo de seu contato :)"></textarea>
+                        <button type="submit">Enviar</button>
+                    </div>
+
+                </form>
+            </section>
+    </main>
 
 
 

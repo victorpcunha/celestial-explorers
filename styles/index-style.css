@@ -131,6 +131,11 @@ section {
     line-height: 1.6rem;
 }
 
+.destaque-text {
+    color: var(--highligth-color);
+    text-shadow: 0 0 20px var(--highligth-color);
+}
+
 .exploracao {
     padding-bottom: 2.5rem;
 }
@@ -154,6 +159,10 @@ section {
     justify-content: space-evenly;
     align-items: center;
     min-height: 450px;
+}
+
+.exploracao-grid-text2 {
+    margin-bottom: 1rem;
 }
 
 .section-btn {
@@ -190,14 +199,13 @@ section {
 .desbravando {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
 }
 
 .desbravando-img {
-    /* display: block; */
     max-width: 100%;
     height: auto;
-    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border: 2px solid var(--highligth-color);
 }
 
 .desbravando-btn {
@@ -218,7 +226,8 @@ picture+.section-text {
 .geracao-img {
     display: block;
     max-width: 100%;
-    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border: 2px solid var(--highligth-color);
 }
 
 .geracao .section-text {
