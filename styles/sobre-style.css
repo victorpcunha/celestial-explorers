@@ -366,9 +366,6 @@ section {
 }
 
 @media (max-width: 360px) {
-
-    
-
     nav a {
         font-size: 1rem;
     }
