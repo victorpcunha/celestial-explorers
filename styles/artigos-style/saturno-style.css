@@ -1,0 +1,75 @@
+/* Configuração para dispositivos móveis pequenos --> 320px */
+/* Configuração padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Cores de Fundo */
+    --fundo-body-start: #0D1B2A;
+    --fundo-body-end: #000000;
+    --fundo-main-start: #F0C419;
+    --fundo-main-end: #AA7F0A;
+
+    /* Cores de textos */
+    --h1-color: #FFFFFF;
+    --h2-color: #FFD700;
+    --h3-color: #F2C94C;
+    --p-color: #F5F5F5;
+
+    /* Fontes */
+    --fonte-h1: 'Orbitron', sans-serif;
+    --fonte-h2: 'Raleway', sans-serif;
+    --fonte-h3: 'Montserrat', sans-serif;
+    --fonte-p: 'Roboto', sans-serif;
+
+    /* Tamanhos das fontes */
+    /* --h1-font-size: 2.5rem;
+    
+    --h2-font-size: 2rem;
+  
+    --h3-font-size: 1.5rem;
+   
+    --p-font-size: 1.3rem; */
+    
+
+    --p-font-size: 1rem; /* Tamanho base para o parágrafo */
+    --h1-font-size: 2rem; /* Tamanho para h1 */
+    --h2-font-size: 1.8rem; /* Tamanho para h2 */
+    --h3-font-size: 1.5rem; /* Tamanho para h3 */
+}
+
+body {
+    background-image: linear-gradient(to bottom, var(--fundo-body-start), var(--fundo-body-end));
+    color: var(--p-color);
+}
+
+main {
+    background-image: linear-gradient(to bottom, var(--fundo-main-start), var(--fundo-main-end));
+    min-width: 300px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Fim configuração padrão */
+
+/* header */
+
+.hero-bg {
+    background: var(--fundo-body-start) url(../../img/saturno/header-img.png) no-repeat center center / cover scroll;
+    min-height: 40vh;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 40vh;
+    padding: 2rem;
+    background-color: #113b71a4;
+}
