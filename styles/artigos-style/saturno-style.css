@@ -236,28 +236,43 @@ section {
 
 /* media types */
 
-@media (min-width: 768px) {
+/* Config dispositivos médios */
+@media (min-width: 768px) { 
 
     .hero-container {
         padding: 5rem;
     }
 
+    .hero-title {
+        font-size: 3.2rem;
+    }
+
     .hero-text {
+        font-size: 1.375rem;
+        padding: 0 2rem;
         margin-top: 2rem;
+    }
+
+    nav a {
+        font-size: 1.3rem;
+    }
+
+    nav a:hover {
+        font-size: 1.4rem;
     }
 
     section {
        padding: 2.5rem 6.25rem 1.25rem;
     }
 
-    .estrutura-text-img, .conclusao-text-img {
+    .estrutura-text-img {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
     }
 
-    .estrutura-img, .conclusao-img {
+    .estrutura-img {
         width: 400px;
     }
 
@@ -267,15 +282,27 @@ section {
     }
 }
 
+/* Config dispositivos grandes */
 @media (min-width: 1024px) {
-    .estrutura-text-img, .conclusao-text-img {
+    .estrutura-title, .aneis-title, .satelites-title, .exploracao-title, .conclusao-title {
+        font-size: 2.25rem;
+    }
+
+    .estrutura-text, .aneis-text, .satelites-text, .exploracao-text, .conclusao-text {
+        font-size: 1.375rem;
+        line-height: 2rem;
+    }
+
+    .estrutura-text-img {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         align-items: center;
     }
 
-    .estrutura-img, .conclusao-img {
+    .estrutura-img {
         margin-left: 3rem;
     }
+
+    
 }

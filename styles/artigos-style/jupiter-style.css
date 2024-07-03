@@ -15,7 +15,7 @@
     --h2-color: #FFD700;
     --p-color: #e7e6e6;
     --nav-color: #D9E2EC;
-    --highligth-color: #E66031;
+    --highligth-color: #FFD700;
 
     --h1-font: 'Raleway', sans-serif;
     --h2-font: 'Roboto Slab', serif;
@@ -35,8 +35,6 @@ body {
     min-height: 40vh;
     background: var(--background-body1) url(../../img/jupiter/header-img.png) no-repeat center center / cover scroll;
     box-shadow: 0px 0px 20px 0px black;
-    position: relative;
-    z-index: 1;
 }
 
 .hero-content {
@@ -44,7 +42,9 @@ body {
     flex-direction: column;
     padding: 2.5rem 14rem;
     text-align: center;
+    align-items: center;
     text-shadow: 1px 1px 6px black;
+    /* position: relative; */
 }
 
 .hero-title {
@@ -59,6 +59,39 @@ body {
     font-size: 1.375rem;
     line-height: 1.8rem;
     color: var(--p-color);
+}
+
+nav {
+    position: absolute;
+    top: 0;
+}
+
+.navbar-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-btn {
+    list-style-type: none;
+    padding: 1rem;
+}
+
+nav a {
+    font-family: var(--p-font);
+    font-size: var(--p-size);
+    color: var(--p-color);
+    text-decoration: none;
+    padding-bottom: .2rem;
+    border-bottom: 0 solid transparent;
+    transition: .4s ease-in-out;
+}
+
+nav a:hover {
+    color: var(--highligth-color);
+    font-size: 1.4rem;
+    border-bottom: 1px solid var(--highligth-color);
 }
 
 /* fim header */
@@ -104,7 +137,9 @@ main {
 .final-img {
     width: 400px;
     height: auto;
-    padding-left: 3rem;
+    margin-left: 3rem;
+    border: 2px solid var(--h2-color);
+    box-shadow:  0 0 15px black;
 }
 
 .caract-figcaption,
@@ -152,6 +187,10 @@ main {
     padding-bottom: 1rem;
 }
 
+.destaque-text {
+    color: var(--highligth-color);
+}
+
 /* config container --> section-mancha / section-luas / section-espacial */
 
 .mancha-text-img,
@@ -176,6 +215,8 @@ main {
     width: 90%;
     height: auto;
     margin: 0 auto;
+    border: 2px solid var(--h2-color);
+    box-shadow:  0 0 15px black;
 }
 
 /* config section --> final */
@@ -186,9 +227,6 @@ main {
     flex-direction: column;
 }
 
-.final .final-title {
-    text-align: left;
-}
 .return-link {
     text-decoration: none;
     font-family: var(--p-font);
@@ -201,20 +239,27 @@ main {
 
 .return-link:hover {
     color: var(--p-color);
-    background-color: var(--highligth-color);
-    border-color: var(--highligth-color);
+    background-color: var(--background-gradient-start);
+    border-color: var(--background-gradient-start);
     transform: scale(1.2);
 }
 
 /* INICIO FOOTER */
 
-footer {
+.footer-container {
     background-color: var(--background-body2);
     font-family: var(--p-font);
-    font-size: 1.375rem;
+    font-size: 1rem;
     text-align: center;
-    padding: 1rem;
+    padding: 1rem 6.25rem;
+    margin: 0 auto;
     color: var(--p-color);
+    max-width: 1000px;
+    line-height: 1.6rem;
+}
+
+.footer-text {
+    padding-bottom: 1rem;
 }
 
 .link-footer {
@@ -225,9 +270,13 @@ footer {
 }
 
 .link-footer:hover {
-    color: var(--background-gradient-end);
-    border-bottom: 2px solid var(--background-gradient-end);
+    color: var(--highligth-color);
+    border-bottom: 2px solid var(--highligth-color);
 
+}
+
+.link-celestial {
+    color: var(--p-color);
 }
 
 /* FIM FOOTER */
@@ -255,6 +304,10 @@ footer {
         padding-bottom: 1rem;
     }
 
+    .caract-img, .final-img {
+        margin: 0;
+    }
+
     .caract-text1,
     .final-text1 {
         padding-bottom: 1rem;
@@ -268,6 +321,7 @@ footer {
         flex-direction: column;
     }
 }
+
 
 /* Dispositivos médios */
 @media (max-width: 835px) {
@@ -285,12 +339,23 @@ footer {
         text-align: center;
     }
 
+    .footer-container {
+        padding: 1rem 3rem;
+    }
 }
 
     /* Dispositivos pequenos */
     @media (max-width: 430px) {
         .hero-content {
             padding: 1.5rem;
+        }
+
+        nav a {
+            font-size: 1rem;
+        }
+    
+        nav a:hover {
+            font-size: 1.1rem;
         }
 
         main {
