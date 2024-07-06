@@ -13,11 +13,11 @@
 
     /* Cores de textos */
 
-    --color-h1: white;
-    --color-h2:  #f7a745;
-    --color-h3: #94A4B4;
-    --color-p: white;
-    --color-highlight: #F9C078;
+    --color-h1: #B22222; /* Firebrick */
+    --color-h2: #8B0000; /* Dark Red */
+    --color-h3: #A52A2A; /* Brown */
+    --color-p: #2F4F4F;  /* Dark Slate Gray */
+    --color-highlight: #FFD700; /* Gold */
     --gradient-start: #5F474A;
     --gradient-end:  #f9bf78b9;
 
@@ -126,3 +126,9 @@ nav a:hover {
     border-bottom: 1px solid var(--color-highlight);
 }
 /* fim header */
+
+/* config padrao conteudo */
+
+section {
+    padding: 2rem 1rem 0;
+}

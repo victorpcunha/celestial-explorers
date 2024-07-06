@@ -1,0 +1,294 @@
+/* Configuração para dispositivos móveis pequenos --> 320px */
+/* Configuração padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Cores de Fundo */
+    --fundo-body-start: #0D1B2A;
+    --fundo-body-end: #000000;
+
+    /* Cores de textos */
+
+    --color-h1: #2C5F2D; /* Verde Floresta */
+    --color-h2: #4A7C59; /* Verde Musgo */
+    --color-h3: #719872; /* Verde Folha */
+    --color-p: black; /* Cinza Escuro */
+    --color-highlight: #0007a0;
+    --color-highlight2: #1fb859; /* Verde Folha */
+    --gradient-start: #87CEEB; /* Azul Céu */
+    --gradient-end: #FFFFFF; /* Branco */
+
+    /* Fontes */
+    --fonte-h1: 'Orbitron', sans-serif;
+    --fonte-h2: 'Raleway', sans-serif;
+    --fonte-h3: 'Montserrat', sans-serif;
+    --fonte-p: 'Roboto', sans-serif;
+
+    /* Tamanhos das fontes */
+    --p-font-size: 1rem; /* Tamanho base para o parágrafo */
+    --h1-font-size: 2rem; /* Tamanho para h1 */
+    --h2-font-size: 1.8rem; /* Tamanho para h2 */
+    --h3-font-size: 1.5rem; /* Tamanho para h3 */
+}
+
+body {
+    background-image: linear-gradient(to bottom, var(--fundo-body-start), var(--fundo-body-end));
+    color: white;
+}
+
+main {
+    background-image: linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
+    min-width: 300px;
+    max-width: 1000px;
+    margin: 0 auto 1rem auto;
+}
+
+/* Fim configuração padrão */
+
+/* header */
+
+.hero-bg {
+    background: var(--fundo-body-start) url(../../img/terra/header-img.jpg) no-repeat center center / cover scroll;
+    min-height: 40vh;
+}
+
+.hero-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+    color: white;
+    text-shadow: 0 0 10px black;
+    text-align: center;
+    
+    width: 100%;
+    min-height: 40vh;
+    padding: 2rem;
+
+    box-shadow: 0 0 10px black;
+    z-index: 1;
+    /* background-color: var(--header-color); */
+}
+
+.hero-title {
+    font-family: var(--fonte-h1);
+    font-size: var(--h1-font-size);
+    color: white;
+    padding: 0 2rem;
+    margin: 2rem 0 1rem;
+}
+
+.destaque-title {
+    color: var(--color-highlight2);
+}
+.destaque-text {
+    color: var(--color-highlight);
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.445);
+}
+
+.hero-text {
+    font-family: var(--fonte-p);
+    font-size: var(--p-font-size);
+    letter-spacing: .1rem;
+    line-height: 1.6rem;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    margin-top: 1rem;
+    font-family: var(--fonte-p);
+}
+
+.navbar-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-btn {
+    list-style-type: none;
+    padding: .5rem;
+}
+
+nav a {
+    font-size: var(--p-font-size);
+    color: white;
+    text-decoration: none;
+    padding-bottom: .2rem;
+    border-bottom: 0 solid transparent;
+    transition: .4s ease-in-out;
+}
+
+nav a:hover {
+    color: var(--color-highlight);
+    font-size: 1.1rem;
+    border-bottom: 1px solid var(--color-highlight);
+}
+/* fim header */
+
+/* config padrao conteudo */
+
+section {
+    padding: 2rem 1rem 0;
+}
+
+.section-title {
+    font-family: var(--fonte-h2);
+    font-size: var(--h2-font-size);
+    color: var(--color-h2);
+    text-align: center;
+
+    margin-bottom: 1rem;
+}
+
+.section-text {
+    font-family: var(--fonte-p);
+    font-size: var(--p-font-size);
+    color: var(--color-p);
+    text-align: justify;
+    padding-bottom: .8rem;
+}
+
+.section-subtitle {
+    font-family: var(--fonte-h3);
+    font-size: var(--h3-font-size);
+    color: var(--color-h3);
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+/* config imgs */
+
+.caracteristicas-img, .estrutura-img, .clima-img, .biodiversidade-img, .conclusao-img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid var(--color-highlight);
+    box-shadow: 0 0 10px black;
+}
+
+.legenda-img {
+    font-family: var(--fonte-p);
+    color: var(--color-p);
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+
+
+/* config sections*/
+
+.desafios-bg {
+    background: transparent url(../../img/terra/desafios-img.jpg) no-repeat center center / cover fixed;
+    margin-top: 2rem;
+}
+
+.desafios {
+    background-color: #edf7fcab;
+}
+
+/* footer */
+.footer-container {
+    font-family: var(--fonte-p);
+    color: white;
+    text-align: justify;
+    line-height: 1.6rem;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.footer-text-autor {
+    font-size: var(--p-font-size);
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.link-footer {
+    color: white;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: .4s ease-in-out;
+}
+
+.link-footer:hover {
+    color: var(--color-highlight2);
+    border-bottom: 2px solid var(--color-highlight2);
+}
+
+.link-celestial {
+    color: white;
+}
+
+/* Media query */
+
+@media (min-width: 360px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-text, .hero-text, nav a {
+        font-size: 1.2rem;
+    }
+
+    nav a:hover {
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .hero-bg {
+        min-height: 30vh;
+    }
+
+    .hero-container {
+        min-height: 30vh;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-text, .section-text, nav a {
+        font-size: 1.5rem;
+    }
+
+    nav a:hover {
+        font-size: 1.7rem;
+    }
+
+    section {
+        padding: 2.5rem 6.25rem 1.25rem;
+    }    
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.8rem;
+    }
+
+    .footer-container {
+        min-width: 300px;
+        max-width: 1000px;
+        padding: 2.5rem 6.25rem 1.25rem;
+        margin: 0 auto;
+    }
+
+    .footer-text {
+        text-align: center;
+    }
+}
