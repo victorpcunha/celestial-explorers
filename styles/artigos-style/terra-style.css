@@ -129,9 +129,9 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--color-highlight);
+    color: var(--color-highlight2);
     font-size: 1.1rem;
-    border-bottom: 1px solid var(--color-highlight);
+    border-bottom: 1px solid var(--color-highlight2);
 }
 /* fim header */
 
@@ -175,6 +175,8 @@ section {
     box-shadow: 0 0 10px black;
 }
 
+
+
 .legenda-img {
     font-family: var(--fonte-p);
     color: var(--color-p);
@@ -193,6 +195,35 @@ section {
 
 .desafios {
     background-color: #edf7fcab;
+}
+
+.conclusao {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* config return-btn */
+
+.return-btn {
+    font-family: var(--fonte-p);
+    font-size: var(--p-font-size);
+    color: var(--color-highlight);
+    background-color: transparent;
+    text-decoration: none;
+
+    border: 1px solid var(--color-highlight);
+    padding: .5rem 1.5rem;
+    margin-bottom: 1rem;
+    transition: .4s ease-in-out;
+}
+
+.return-btn:hover {
+    color: white;
+    background-color: var(--color-highlight);
+    border: 1px solid var(--color-highlight);
+    transform: scale(1.1);
 }
 
 /* footer */
@@ -290,5 +321,44 @@ section {
 
     .footer-text {
         text-align: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-container {
+        min-height: 50vh;
+    }
+
+    .hero-title {
+        padding-bottom: 2rem;
+    }
+
+    .navbar-btn {
+        padding: 1rem;
+    }
+
+    nav a {
+        font-size: 1.3rem;
+    }
+
+    nav a:hover {
+        font-size: 1.4rem;
+    }
+
+    .caracteristicas-text-img, .conclusao-text-img {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .caracteristicas-img, .conclusao-img {
+        max-width: 400px;
+        margin-left: 3rem;
+    }
+
+    .estrutura, .clima, .biodiversidade, .desafios {
+        display: flex;
+        flex-direction: column;
     }
 }
